@@ -38,6 +38,8 @@ header nav {
 header nav ul {
   display: flex;
   gap: 22px;
+  font-size: 14px;
+  font-weight: bold;
 }
 header nav ul li:hover {
   color: orange;
@@ -52,18 +54,43 @@ header .search-bar {
 header .search-bar form {
   position: relative;
   height: 32px;
+  width: 300px;
 }
 header .search-bar form * {
   height: 100%;
+  border: none;
+}
+header .search-bar form .select-arrow {
+  position: absolute;
+  color: black;
+  right: 310px;
+  top: 8px;
+  z-index: 1;
+}
+header .search-bar form select {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: lightgray;
+  width: 130px;
+  padding-left: 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+header .search-bar form input {
+  width: 100%;
+  border-left: 1px solid gray;
 }
 header .search-bar form button {
   position: absolute;
   top: 8px;
-  right: 0;
-  height: 100%;
+  right: 12px;
 }
 header .search-bar form button i {
   color: gray;
+  font-size: 18px;
 }
 
 main {
@@ -74,8 +101,8 @@ main {
 main .current-section {
   width: 100%;
   border-bottom: 2px solid lightgray;
-  padding: 10px 0;
-  margin-bottom: 25px;
+  padding: 15px 0;
+  margin-bottom: 30px;
 }
 main .current-section * {
   margin-right: 10px;
