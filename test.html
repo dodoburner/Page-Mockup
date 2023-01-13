@@ -1,69 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="testStyle.css">
-  <script src="https://kit.fontawesome.com/593ea6dc88.js" crossorigin="anonymous"></script>
-  <script src="sidebar.js" defer></script>
-  <title>HelpJuice Test</title>
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Developers</a></li>
-        <li><a href="#">Developer Blog</a></li>
-        <li><a href="#">Support</a></li>
-
-      </ul>
-    </nav>
-
-    <div class="search-bar">
-      <form>
-        <select>
-          <option selected>All Products</option>
-          <option>Something Else</option>
-          <option>Bla Bla</option>
-        </select>
-
-        <input type="text">
-
-        <button>
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </form>
-    </div>
-  </header>
-
-  <main>
-    <div class="sidebar">
-      <div class="sidebar-item">
-        <div class="sidebar-toggler">
-          Getting Started 
-          <i class="fa-solid fa-caret-right"></i>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="testStyle.css" />
+    <script
+      src="https://kit.fontawesome.com/593ea6dc88.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="sidebar.js" defer></script>
+    <title>HelpJuice Test</title>
+  </head>
+  <body>
+    <header>
+      <nav>
         <ul>
-          <li>User Guides</li>
-          <li>Developer</li>
-          <li>Release Notes</li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Developers</a></li>
+          <li><a href="#">Developer Blog</a></li>
+          <li><a href="#">Support</a></li>
         </ul>
+      </nav>
+
+      <div class="search-bar">
+        <form>
+          <select>
+            <option selected>All Products</option>
+            <option>Something Else</option>
+            <option>Bla Bla</option>
+          </select>
+
+          <input type="text" />
+
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <div class="current-section">
+        <span>Home</span>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span> Getting Started </span>
       </div>
 
-      <div class="sidebar-item">
-        <div class="sidebar-toggler">
-          Personalization
-          <i class="fa-solid fa-caret-right"></i>
+      <div class="sidebar">
+        <div class="sidebar-item">
+          <div class="sidebar-toggler active">
+            Getting Started
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+          <ul>
+            <li>User Guides</li>
+            <li>Developer</li>
+            <li>Release Notes</li>
+          </ul>
         </div>
-        <ul>
-          <li>User Guides</li>
-          <li>Developer</li>
-          <li>Release Notes</li>
-        </ul>
+
+        <div class="sidebar-item">
+          <div class="sidebar-toggler">
+            Personalization
+            <i class="fa-solid fa-caret-right"></i>
+          </div>
+          <ul class="hidden">
+            <li>User Guides</li>
+            <li>Developer</li>
+            <li>Release Notes</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </main>
-</body>
+    </main>
+  </body>
 </html>

@@ -6,10 +6,11 @@ togglers.forEach((toggler) => {
 
   toggler.addEventListener('click', () => {
     list.classList.toggle('hidden');
+    toggler.classList.toggle('active');
     if (list.classList.contains('hidden')) {
-      toggler.children[0].className = "fa-solid fa-caret-down";
-    } else {
       toggler.children[0].className = "fa-solid fa-caret-right";
+    } else {
+      toggler.children[0].className = "fa-solid fa-caret-down";
     }
   })
 })

@@ -23,6 +23,10 @@ button {
   display: none;
 }
 
+.active {
+  color: orange;
+}
+
 header {
   padding: 20px 0 30px 0;
   background-color: rgb(71, 70, 70);
@@ -66,6 +70,18 @@ main {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+}
+main .current-section {
+  width: 100%;
+  border-bottom: 2px solid lightgray;
+  padding: 10px 0;
+  margin-bottom: 25px;
+}
+main .current-section * {
+  margin-right: 10px;
+}
+main .current-section i {
+  font-size: 12px;
 }
 main .sidebar-item {
   margin-bottom: 10px;
