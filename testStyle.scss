@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 20px 0 30px 0;
+  background-color: rgb(71, 70, 70);
+  color: white;
+
+  nav {
+    margin-left: 50%;
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+
+      li:hover {
+        color: orange;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+
+    form {
+      position: relative;
+      height: 32px;
+
+      * {
+        height: 100%;
+      }
+
+      button {
+        position: absolute;
+        top: 8px;
+        right: 0;
+        border: none;
+        background: none;
+        height: 100%;
+
+        i {
+          color: gray;
+        }
+      }
+    }
+  } 
+}
+
