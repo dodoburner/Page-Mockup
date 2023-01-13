@@ -20,6 +20,12 @@ button {
   cursor: pointer;
 }
 
+li:hover {
+  color: orange;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
 .hidden {
   display: none;
 }
@@ -31,7 +37,7 @@ button {
 header {
   padding: 20px 0 30px 0;
   background: linear-gradient(to top, #5E6161, #2F3030);
-  color: white;
+  color: #E9E9E9;
 }
 header nav {
   margin-left: 50%;
@@ -41,11 +47,6 @@ header nav ul {
   gap: 34px;
   font-size: 14px;
   font-weight: bold;
-}
-header nav ul li:hover {
-  color: orange;
-  cursor: pointer;
-  transition: 0.3s;
 }
 header .search-bar {
   display: flex;
@@ -137,8 +138,6 @@ main .main-content .sidebar-item ul li {
   font-size: 13px;
 }
 main .main-content .sidebar-item ul li:hover {
-  color: orange;
-  cursor: pointer;
   border-color: orange;
 }
 main .main-content h1 {
@@ -218,15 +217,20 @@ footer .footer-content form div input {
   background-color: inherit;
   border: none;
   border-bottom: 1px solid black;
+  margin-top: 8px;
 }
 footer .footer-content form button {
   background-color: #FFD105;
   width: 100px;
-  height: 24px;
+  height: 26px;
   border-radius: 20px;
   padding: 2px;
   margin-left: auto;
   margin-right: auto;
+}
+footer .footer-content form button:hover {
+  opacity: 0.7;
+  transition: 0.3s;
 }
 footer .footer-content .footer-sections {
   display: grid;
