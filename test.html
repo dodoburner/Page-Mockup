@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="testStyle.css" />
     <script
       src="https://kit.fontawesome.com/593ea6dc88.js"
@@ -55,6 +61,7 @@
               Getting Started
               <i class="fa-solid fa-caret-down"></i>
             </div>
+
             <ul>
               <li>User Guides</li>
               <li>Developer</li>
@@ -67,52 +74,71 @@
               Personalization
               <i class="fa-solid fa-caret-right"></i>
             </div>
+
             <ul class="hidden">
-              <li>User Guides</li>
               <li>Developer</li>
               <li>Release Notes</li>
             </ul>
           </div>
         </div>
+    </main>
 
-        <div class="sidebar-content">
-          <h1>Getting Started</h1>
+    <footer>
+      <div class="footer-content">
+        <p class="footer-heading">Still need help?</p>
 
-          <div class="sections-container">
-            <div class="sidebar-section">
-              <div class="section-img-container">
-                <div class="orange-triangle-bg"></div>
-                <i class="fa-regular fa-file"></i>
-              </div>
-              <div class="section-text-container">
-                <h2>User Guides</h2>
-                <p>We're a new category, with lots of useful information</p>
-              </div>
-            </div>
-            <div class="sidebar-section">
-              <div class="section-img-container">
-                <div class="orange-triangle-bg"></div>
-                <i class="fa-regular fa-file"></i>
-              </div>
-              <div class="section-text-container">
-                <h2>User Guides</h2>
-                <p>We're a new category, with lots of useful information</p>
-              </div>
-            </div>
-            <div class="sidebar-section">
-              <div class="section-img-container">
-                <div class="orange-triangle-bg"></div>
-                <i class="fa-regular fa-file"></i>
-              </div>
-              <div class="section-text-container">
-                <h2>User Guides</h2>
-                <p>We're a new category, with lots of useful information</p>
-              </div>
-            </div>
+        <form>
+          <div>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" required />
+          </div>
+          <div>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <button>Get Started</button>
+        </form>
+
+        <div class="footer-sections">
+          <div>
+            <p>Products</p>
+            <ul>
+              <li>Personalization</li>
+              <li>eCommerce</li>
+              <li>Order Management</li>
+              <li>Point of Sale</li>
+            </ul>
+          </div>
+
+          <div>
+            <p>Resources</p>
+            <ul>
+              <li>Blog</li>
+              <li>Developer Blog</li>
+              <li>Developers</li>
+              <li>Support</li>
+            </ul>
+          </div>
+
+          <div>
+            <p>Who We Are</p>
+            <ul>
+              <li>Who We Are</li>
+              <li>Leadership</li>
+              <li>News/Press</li>
+              <li>Ecommerce Awards</li>
+            </ul>
+          </div>
+
+          <div>
+            <p>Employee Login</p>
           </div>
         </div>
       </div>
-    </main>
-    <footer></footer>
+    </footer>
   </body>
 </html>

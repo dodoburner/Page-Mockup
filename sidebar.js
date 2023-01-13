@@ -2,37 +2,66 @@ const togglers = document.querySelectorAll(".sidebar-toggler");
 const mainContent = document.querySelector(".main-content");
 import { data } from "./data.js";
 
-// const activeToggler = [...togglers].find((el) =>
-//   el.classList.contains("active")
-// );
-// const sidebarData = data.find((el) => {
-//   const parent = activeToggler.parentNode;
-//   console.log(parent.id)
-//   return parent.id === el.id;
-// });
+function displaySections(sectionID) {
+  // I target the sidebar content node and if it exist remove it from the main section
+  const sidebarContentNode = mainContent.children[1];
+  if (sidebarContentNode) mainContent.removeChild(sidebarContentNode);
 
-// const sidebarContent = document.createElement("div");
-// sidebarContent.innerHTML = `
-//   <h1>${sidebarData.name}</h1>
-//   ${sidebarData.items.map((el) => {
-//     return `
-//       <div>
-//         <h3>${el.title}</h3>
-//         <p>${el.description}</p>
-//       </div>
-//     `;
-//   })} 
-// `;
+  // I find the section data using the sectionID, create the section and it's content,
+  // and I append it to the main section
+  const sidebarItemData = data.find((el) => el.id === sectionID);
+  const sidebarContent = document.createElement("div");
+  sidebarContent.className = `sidebar-content ${sectionID}`;
+  const sidebarSections = sidebarItemData.items.map((el) => {
+    return `
+      <div class="sidebar-section">
+        <div class="section-img-container">
+          <div class="orange-triangle-bg"></div>
+          ${el.logo}
+        </div>
 
-// mainContent.appendChild(sidebarContent);
+        <div class="section-text-container">
+          <h2>${el.title}</h2>
+          <p>${el.description}</p>
+        </div>
+      </div>
+    `;
+  });
+  sidebarContent.innerHTML = `
+    <h1>${sidebarItemData.name}</h1>
+    <div class="sections-container">
+      ${sidebarSections.join("")}
+    </div>
+  `;
+  mainContent.appendChild(sidebarContent);
+}
 
-togglers.forEach((toggler) => {
+displaySections(data[0].id);
+
+togglers.forEach((toggler, index) => {
   const parent = toggler.parentNode;
-  const list = parent.children[1];
 
   toggler.addEventListener("click", () => {
-    list.classList.toggle("hidden");
-    toggler.classList.toggle("active");
+    togglers.forEach((toggler, i) => {
+      const parent = toggler.parentNode;
+      const list = parent.children[1];
+    
+      if (i === index) {
+        list.classList.remove("hidden");
+        toggler.classList.add("active");
+      } else {
+        list.classList.add("hidden");
+        toggler.classList.remove("active");
+      }
+    })
+
+    // If the clicked sidebar item is not the same as on the sidebar content
+    // then display the proper content
+    const sidebarContent = document.querySelector('.sidebar-content');
+    if (!sidebarContent.classList.contains(parent.id)) {
+      displaySections(parent.id)
+    }
+
     if (list.classList.contains("hidden")) {
       toggler.children[0].className = "fa-solid fa-caret-right";
     } else {
