@@ -1,6 +1,7 @@
 const data = [
   {
     name: "Getting Started",
+    id: "gettingStarted",
     items: [
       {
         title: "User Guides",
@@ -18,6 +19,7 @@ const data = [
   },
   {
     name: "Personalization",
+    id: "personalization",
     items: [
       {
         title: "Some New Category",
@@ -31,4 +33,4 @@ const data = [
   },
 ];
 
-export default data;
+export { data };

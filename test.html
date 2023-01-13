@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/593ea6dc88.js"
       crossorigin="anonymous"
     ></script>
-    <script src="sidebar.js" defer></script>
+    <script src="sidebar.js" type="module" defer></script>
     <title>HelpJuice Test</title>
   </head>
   <body>
@@ -47,29 +47,31 @@
         <span> Getting Started </span>
       </div>
 
-      <div class="sidebar">
-        <div class="sidebar-item">
-          <div class="sidebar-toggler active">
-            Getting Started
-            <i class="fa-solid fa-caret-down"></i>
+      <div class="main-content">
+        <div class="sidebar">
+          <div class="sidebar-item" id="gettingStarted">
+            <div class="sidebar-toggler active">
+              Getting Started
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <ul>
+              <li>User Guides</li>
+              <li>Developer</li>
+              <li>Release Notes</li>
+            </ul>
           </div>
-          <ul>
-            <li>User Guides</li>
-            <li>Developer</li>
-            <li>Release Notes</li>
-          </ul>
-        </div>
 
-        <div class="sidebar-item">
-          <div class="sidebar-toggler">
-            Personalization
-            <i class="fa-solid fa-caret-right"></i>
+          <div class="sidebar-item" id="personalization">
+            <div class="sidebar-toggler">
+              Personalization
+              <i class="fa-solid fa-caret-right"></i>
+            </div>
+            <ul class="hidden">
+              <li>User Guides</li>
+              <li>Developer</li>
+              <li>Release Notes</li>
+            </ul>
           </div>
-          <ul class="hidden">
-            <li>User Guides</li>
-            <li>Developer</li>
-            <li>Release Notes</li>
-          </ul>
         </div>
       </div>
     </main>
