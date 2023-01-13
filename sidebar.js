@@ -2,29 +2,29 @@ const togglers = document.querySelectorAll(".sidebar-toggler");
 const mainContent = document.querySelector(".main-content");
 import { data } from "./data.js";
 
-const activeToggler = [...togglers].find((el) =>
-  el.classList.contains("active")
-);
-const sidebarData = data.find((el) => {
-  const parent = activeToggler.parentNode;
-  console.log(parent.id)
-  return parent.id === el.id;
-});
+// const activeToggler = [...togglers].find((el) =>
+//   el.classList.contains("active")
+// );
+// const sidebarData = data.find((el) => {
+//   const parent = activeToggler.parentNode;
+//   console.log(parent.id)
+//   return parent.id === el.id;
+// });
 
-const sidebarContent = document.createElement("div");
-sidebarContent.innerHTML = `
-  <h1>${sidebarData.name}</h1>
-  ${sidebarData.items.map((el) => {
-    return `
-      <div>
-        <h3>${el.title}</h3>
-        <p>${el.description}</p>
-      </div>
-    `;
-  })} 
-`;
+// const sidebarContent = document.createElement("div");
+// sidebarContent.innerHTML = `
+//   <h1>${sidebarData.name}</h1>
+//   ${sidebarData.items.map((el) => {
+//     return `
+//       <div>
+//         <h3>${el.title}</h3>
+//         <p>${el.description}</p>
+//       </div>
+//     `;
+//   })} 
+// `;
 
-mainContent.appendChild(sidebarContent);
+// mainContent.appendChild(sidebarContent);
 
 togglers.forEach((toggler) => {
   const parent = toggler.parentNode;
