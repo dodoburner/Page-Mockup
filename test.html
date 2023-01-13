@@ -6,17 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="testStyle.css">
   <script src="https://kit.fontawesome.com/593ea6dc88.js" crossorigin="anonymous"></script>
-  <title>Document</title>
+  <script src="sidebar.js" defer></script>
+  <title>HelpJuice Test</title>
 </head>
 <body>
-  
   <header>
     <nav>
       <ul>
-        <li>Blog</li>
-        <li>Developers</li>
-        <li>Developer Blog</li>
-        <li>Support</li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Developers</a></li>
+        <li><a href="#">Developer Blog</a></li>
+        <li><a href="#">Support</a></li>
+
       </ul>
     </nav>
 
@@ -36,5 +37,33 @@
       </form>
     </div>
   </header>
+
+  <main>
+    <div class="sidebar">
+      <div class="sidebar-item">
+        <div class="sidebar-toggler">
+          Getting Started 
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <ul>
+          <li>User Guides</li>
+          <li>Developer</li>
+          <li>Release Notes</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-item">
+        <div class="sidebar-toggler">
+          Personalization
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <ul>
+          <li>User Guides</li>
+          <li>Developer</li>
+          <li>Release Notes</li>
+        </ul>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

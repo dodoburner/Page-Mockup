@@ -1,6 +1,26 @@
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
 
 header {
@@ -12,7 +32,6 @@ header nav {
   margin-left: 50%;
 }
 header nav ul {
-  list-style: none;
   display: flex;
   gap: 22px;
 }
@@ -37,10 +56,31 @@ header .search-bar form button {
   position: absolute;
   top: 8px;
   right: 0;
-  border: none;
-  background: none;
   height: 100%;
 }
 header .search-bar form button i {
   color: gray;
+}
+
+main {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+main .sidebar-item {
+  margin-bottom: 10px;
+  width: 150px;
+}
+main .sidebar-item .sidebar-toggler {
+  display: flex;
+  justify-content: space-between;
+}
+main .sidebar-item ul {
+  margin-top: 10px;
+}
+main .sidebar-item ul li {
+  border-left: 4px solid black;
+  padding: 3px 0px 3px 10px;
+  font-weight: bold;
+  font-size: 13px;
 }/*# sourceMappingURL=testStyle.css.map */
